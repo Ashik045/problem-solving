@@ -88,6 +88,6 @@ var maxArea2 = function(height) {
     return total_water;
 };
 
-console.log(maxArea2([1,8,6,2,5,4,8,3,7]))
+console.log(maxArea2([1,8,6,2,5,4,8,3,7]));
 // Time Complexity: O(n)
 // Space Complexity: O(1)
