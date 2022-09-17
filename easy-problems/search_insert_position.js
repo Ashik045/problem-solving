@@ -53,5 +53,6 @@ const searchInsert2 = function(nums, target) {
     return left;
 }
 
-const nums2 = [1,3,5,6]
+const nums2 = [1,3,5,6];
 console.log(searchInsert2(nums2, 2));
+// Time Complexity: O(n)
