@@ -1,4 +1,4 @@
-// ***************** Two sum ******************
+// ***************** Binary Tree Inorder Traversal ******************
 // Problem: Given the root of a binary tree, return the inorder traversal of its nodes' values.
 
 // Example 1:
@@ -19,7 +19,7 @@ var inorderTraversal = function(root) {
 
     function inOrderFunction(node) {
         if(!node) return;
-        inorderTraversal(node.left);
+        inOrderFunction(node.left);
         result.push(node.val);
         inOrderFunction(node.right);
     }
