@@ -13,8 +13,35 @@
 // Input: nums1 = [1], m = 1, nums2 = [], n = 0
 // Output: [1]
 
-// solution:
 // solution-1:
 var merge = function(nums1, m, nums2, n) {
-    
+    for (let i = 0; i < n; i++) {
+        nums1[i + m] = nums2[i]
+    }
+
+    // not return anything, modify nums1 in-place instead.
+    nums1.sort((a, b) => a - b)
 };
+
+console.log(merge([1,2,3,0,0,0], 3, [2,5,6], 3));
+// Time Complexity: O(n)
+
+// ----------------------------------------------------------------
+
+// solution-2: (faster than 92.53% of JavaScript online submissions)
+var merge2 = function (nums1, m, nums2, n) {
+    nums1.splice(m)
+
+    for (let i = 0; i < n; i++) {
+        // inserts each number from nums2 to the beggining of nums1 using array.unshift() method.
+        nums1.unshift(nums2[i]);
+    }
+
+    // sort the array using array.sort() method
+    nums1.sort((a, b) => a - b);
+};
+
+console.log(merge2([1,2,3,0,0,0], 3, [2,5,6], 3));
+// Time Complexity: O(n)
+
+
