@@ -15,19 +15,19 @@
 
 // solution-1
 var postorderTraversal = function(root) {
-    // let result = [];
+    let result = [];
 
-    // function inOrderFunction(node) {
-    //     if(!node) return;
-    //     inOrderFunction(node.left);
-    //     inOrderFunction(node.right);
-    //     result.push(node.val);
-    // }
+    function postOrderFunction(node) {
+        if(!node) return;
+        postOrderFunction(node.left);
+        postOrderFunction(node.right);
+        result.push(node.val);
+    }
     
-    // inOrderFunction(root);
-    // return result;
+    postOrderFunction(root);
+    return result;
 };
 
-console.log(inorderTraversal([1,null,2,3]));
+console.log(postorderTraversal([1,null,2,3]));
 // Time Complexity: 
 
